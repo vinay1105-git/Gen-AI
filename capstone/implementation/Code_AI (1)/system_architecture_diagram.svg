@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2200 1080" width="100%" height="100%" style="background-color:#ffffff;">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#000000"/>
+    </marker>
+    <style>
+      .main-title { font-family: Arial, sans-serif; font-size: 34px; font-weight: bold; fill: #000000; text-anchor: middle; }
+      .sec-title { font-family: Arial, sans-serif; font-size: 27px; font-weight: bold; fill: #000000; text-anchor: middle; letter-spacing: 0.5px; }
+      .card-title { font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; fill: #000000; text-anchor: middle; }
+      .card-sub { font-family: Arial, sans-serif; font-size: 19px; fill: #333333; text-anchor: middle; }
+      .rf-lbl { font-family: Arial, sans-serif; font-size: 19px; fill: #000000; }
+      .box { fill: #ffffff; stroke: #000000; stroke-width: 3.2px; rx: 16px; ry: 16px; }
+      .arr { stroke: #000000; stroke-width: 3.2px; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <text x="1100" y="58" class="main-title">SYSTEM ARCHITECTURE – MULTI-AGENT CODE GENERATION, REVIEW AND SECURITY</text>
+
+  <!-- Row 1 -->
+  <rect x="65" y="110" width="460" height="155" class="box"/>
+  <text x="295" y="168" class="card-title">USER INPUT</text>
+  <text x="295" y="214" class="card-sub">Natural-language</text>
+  <text x="295" y="240" class="card-sub">requirement</text>
+  <line x1="525" y1="187" x2="590" y2="187" class="arr"/>
+
+  <rect x="598" y="110" width="460" height="155" class="box"/>
+  <text x="828" y="168" class="card-title">REQUIREMENT ANALYSIS</text>
+  <text x="828" y="214" class="card-sub">Requirement Analysis</text>
+  <text x="828" y="240" class="card-sub">Agent</text>
+  <line x1="1058" y1="187" x2="1123" y2="187" class="arr"/>
+
+  <rect x="1131" y="110" width="460" height="155" class="box"/>
+  <text x="1361" y="168" class="card-title">CODE GENERATION</text>
+  <text x="1361" y="214" class="card-sub">Code Generation Agent</text>
+  <text x="1361" y="240" class="card-sub">Local LLM</text>
+  <line x1="1591" y1="187" x2="1656" y2="187" class="arr"/>
+
+  <rect x="1664" y="110" width="460" height="155" class="box"/>
+  <text x="1894" y="168" class="card-title">CODE REVIEW</text>
+  <text x="1894" y="214" class="card-sub">Code Review</text>
+  <text x="1894" y="240" class="card-sub">Agent</text>
+  <line x1="1894" y1="265" x2="1894" y2="322" class="arr"/>
+
+  <!-- Row 2 -->
+  <rect x="65" y="330" width="460" height="155" class="box"/>
+  <text x="295" y="388" class="card-title">TEST &amp; VALIDATION</text>
+  <text x="295" y="434" class="card-sub">Testing &amp; Validation</text>
+  <text x="295" y="460" class="card-sub">Agent / Test Runner</text>
+  <line x1="525" y1="407" x2="590" y2="407" class="arr"/>
+
+  <rect x="598" y="330" width="460" height="155" class="box"/>
+  <text x="828" y="388" class="card-title">VULNERABILITY DETECTION</text>
+  <text x="828" y="434" class="card-sub">Vulnerability Detection</text>
+  <text x="828" y="460" class="card-sub">Agent / Static Analysis</text>
+  <line x1="1058" y1="407" x2="1123" y2="407" class="arr"/>
+
+  <rect x="1131" y="330" width="460" height="155" class="card" class="box"/>
+  <text x="1361" y="388" class="card-title">EXPLANATION &amp; SECURITY FIX</text>
+  <text x="1361" y="434" class="card-sub">Explanation Agent</text>
+  <text x="1361" y="460" class="card-sub">Fix Recommendation Agent</text>
+  <line x1="1591" y1="407" x2="1656" y2="407" class="arr"/>
+
+  <rect x="1664" y="330" width="460" height="155" class="box"/>
+  <text x="1894" y="388" class="card-title">FINAL VALIDATION &amp; REPORT</text>
+  <text x="1894" y="434" class="card-sub">Final Validation</text>
+  <text x="1894" y="460" class="card-sub">Security Report</text>
+
+  <!-- Feedback Arrow -->
+  <path d="M 1361 330 L 1361 300 L 1485 300 L 1485 273" fill="none" stroke="#000000" stroke-width="3.2" marker-end="url(#arrow)"/>
+  <text x="1375" y="320" class="rf-lbl">Review feedback</text>
+
+  <!-- Section 2 -->
+  <text x="1100" y="555" class="sec-title">SUPPORTING SERVICES AND KNOWLEDGE</text>
+
+  <rect x="65" y="595" width="1000" height="140" class="box"/>
+  <text x="565" y="652" class="card-title">LOCAL LLM INFERENCE</text>
+  <text x="565" y="696" class="card-sub">Llama / Code Llama / Mistral / DeepSeek-Coder</text>
+
+  <rect x="1124" y="595" width="1000" height="140" class="box"/>
+  <text x="1624" y="652" class="card-title">SECURITY KNOWLEDGE</text>
+  <text x="1624" y="696" class="card-sub">OWASP Top 10 / CVE / NVD / Coding Standards</text>
+
+  <rect x="65" y="770" width="1000" height="140" class="box"/>
+  <text x="565" y="827" class="card-title">DEVELOPMENT UTILITIES</text>
+  <text x="565" y="871" class="card-sub">Static Analyzer / Test Runner / Syntax Checker</text>
+
+  <rect x="1124" y="770" width="1000" height="140" class="box"/>
+  <text x="1624" y="827" class="card-title">KNOWLEDGE SUPPORT</text>
+  <text x="1624" y="871" class="card-sub">Vector Database / Documentation / Best-Practice Context</text>
+</svg>

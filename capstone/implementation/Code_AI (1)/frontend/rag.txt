@@ -1,0 +1,31 @@
+documents = [ 
+    "RAG combines retrieval with generation using context.", 
+    "Top-K retrieval selects the K most relevant documents.", 
+    "Python is used for artificial intelligence and data science.", 
+    "Natural Language Processing works with human language.", 
+    "Vector databases store and retrieve document embeddings." 
+] 
+ 
+def score(query, document): 
+    q = set(query.lower().split()) 
+    d = set(document.lower().split()) 
+    return len(q & d) 
+ 
+query = input("Enter your question: ") 
+k = int(input("Enter Top-K (1, 3 or 5): ")) 
+ 
+if k not in [1, 3, 5]: 
+    print("Invalid choice. Select 1, 3 or 5.") 
+else: 
+    ranked = sorted( 
+        documents, 
+        key=lambda x: score(query, x), 
+        reverse=True 
+    ) 
+ 
+    print("\nRetrieved Context:") 
+    for i, text in enumerate(ranked[:k], 1): 
+        print(i, ":", text) 
+ 
+    print("\nCombined Context:") 
+print(" ".join(ranked[:k]))

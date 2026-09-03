@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  backend:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - APP_NAME=LLM Multi-Agent System
+      - ENV=development
+      - DEBUG=True
+      - DATABASE_URL=sqlite:///./database/app.db
+      - JWT_SECRET_KEY=supersecretkey
+      - OLLAMA_ENABLED=False
